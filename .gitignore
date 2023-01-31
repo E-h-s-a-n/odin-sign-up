@@ -11,6 +11,7 @@ temp/
 *.scss.map
 
 # vs code
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
