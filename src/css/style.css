@@ -1,0 +1,127 @@
+/* Box sizing rules */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.65;
+  padding: 1.5rem clamp(0.5rem, 5%, 3rem);
+  background-color: #f6f8f6;
+  color: #1a2439;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.smol-centering {
+  display: grid;
+  place-content: center;
+}
+
+.smol-container {
+  width: min(100%, 800px);
+  margin-inline: auto;
+}
+
+.smol-stack-layout {
+  display: grid;
+  grid-template-areas: "stack";
+}
+.smol-stack-layout > * {
+  grid-area: stack;
+}
+
+.smol-stack-layout img {
+  width: 100%;
+  background-image: linear-gradient(#58703f, #cad3c8);
+  border-radius: 1em;
+}
+.smol-stack-layout h3 {
+  place-self: center;
+  width: 100%;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: rgb(235, 235, 217);
+  text-align: center;
+  line-height: 1.5;
+  padding: 5vh 2vw;
+  background-image: radial-gradient(circle, rgba(107, 107, 107, 0.4), rgba(255, 255, 255, 0) 70%);
+}
+.smol-stack-layout small {
+  align-self: end;
+  justify-self: start;
+  padding: 0 0 0.25rem 0.5rem;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  color: rgb(0, 85, 0);
+}
+.smol-stack-layout small a {
+  color: currentColor;
+  text-decoration: none;
+}
+.smol-stack-layout small span {
+  text-decoration: underline;
+}
+.smol-stack-layout h3,
+.smol-stack-layout small {
+  position: relative;
+}
+
+.smol-sidebar {
+  display: grid;
+  grid-template-columns: fit-content(20ch) 1fr;
+}
+
+img:nth-of-type(1) {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+img:nth-of-type(2) {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.random {
+  display: flex;
+  align-items: center;
+  border-radius: 1em;
+  min-height: 70px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: conic-gradient(from 90deg at 70% 50%, #BCA2EB 30%, #00BCD4 30%, #00BCD4 70%, #82A0EE 70%);
+}
+.random > div {
+  width: 70%;
+  padding: 0 12px;
+}
+
+main > * + * {
+  margin-top: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
